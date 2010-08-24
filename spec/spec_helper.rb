@@ -28,7 +28,7 @@ if !Object.const_defined?('Bundler')
 end
 require 'rspec'
 
-lib = File.expand_path('../ruby', File.dirname(__FILE__))
+lib = File.expand_path('../lib', File.dirname(__FILE__))
 unless $LOAD_PATH.include? lib
   $LOAD_PATH.unshift lib
 end

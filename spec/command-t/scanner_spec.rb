@@ -28,7 +28,7 @@ module VIM; end
 
 describe CommandT::Scanner do
   before do
-    @dir = File.join(File.dirname(__FILE__), '..', '..', 'fixtures')
+    @dir = File.join(File.dirname(__FILE__), '..', 'fixtures')
     @all_fixtures = \
       %w(bar/abc bar/xyz baz bing foo/alpha/t1 foo/alpha/t2 foo/beta)
     @scanner = CommandT::Scanner.new @dir
