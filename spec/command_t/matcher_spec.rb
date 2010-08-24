@@ -22,8 +22,8 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 require File.expand_path('../spec_helper', File.dirname(__FILE__))
-require 'command-t/scanner'
-require 'command-t/ext'
+require 'command_t/scanner'
+require 'command_t/ext'
 
 describe CommandT::Matcher do
   describe 'initialization' do

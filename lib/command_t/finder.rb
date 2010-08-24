@@ -21,8 +21,8 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-require 'command-t/ext' # CommandT::Matcher
-require 'command-t/scanner'
+require 'command_t/ext' # CommandT::Matcher
+require 'command_t/scanner'
 
 module CommandT
   # Encapsulates a Scanner instance (which builds up a list of available files

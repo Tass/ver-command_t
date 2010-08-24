@@ -29,9 +29,8 @@ end
 require 'rspec'
 
 lib = File.expand_path('../lib', File.dirname(__FILE__))
-unless $LOAD_PATH.include? lib
-  $LOAD_PATH.unshift lib
-end
+ext = File.expand_path('../ext', File.dirname(__FILE__))
+$LOAD_PATH << lib << ext
 
 RSpec.configure do |config|
   config.mock_framework = :rr

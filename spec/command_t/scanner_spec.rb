@@ -22,9 +22,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 require File.expand_path('../spec_helper', File.dirname(__FILE__))
-require 'command-t/scanner'
-
-module VIM; end
+require 'command_t/scanner'
 
 describe CommandT::Scanner do
   before do
@@ -32,9 +30,6 @@ describe CommandT::Scanner do
     @all_fixtures = \
       %w(bar/abc bar/xyz baz bing foo/alpha/t1 foo/alpha/t2 foo/beta)
     @scanner = CommandT::Scanner.new @dir
-
-    # scanner will call VIM's expand() function for exclusion filtering
-    stub(::VIM).evaluate(/expand\(.+\)/) { '0' }
   end
 
   describe 'paths method' do
@@ -66,11 +61,7 @@ describe CommandT::Scanner do
   end
 
   describe "'wildignore' exclusion" do
-    it "should call on VIM's expand() function for pattern filtering" do
-      @scanner = CommandT::Scanner.new @dir
-      mock(::VIM).evaluate(/expand\(.+\)/).times(10)
-      @scanner.paths
-    end
+    pending
   end
 
   describe ':max_depth option' do

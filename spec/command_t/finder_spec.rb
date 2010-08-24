@@ -22,14 +22,11 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 require File.expand_path('../spec_helper', File.dirname(__FILE__))
-require 'command-t/finder'
-
-module VIM; end
+require 'command_t/finder'
 
 describe CommandT::Finder do
   before :all do
-    @finder = CommandT::Finder.new File.join(File.dirname(__FILE__), '..',
-      '..', 'fixtures')
+    @finder = CommandT::Finder.new File.join(File.dirname(__FILE__), '..', 'fixtures')
     @all_fixtures = %w(
       bar/abc
       bar/xyz
@@ -39,11 +36,6 @@ describe CommandT::Finder do
       foo/alpha/t2
       foo/beta
     )
-  end
-
-  before do
-    # scanner will call VIM's expand() function for exclusion filtering
-    stub(::VIM).evaluate(/expand\(.+\)/) { '0' }
   end
 
   describe 'sorted_matches_for method' do

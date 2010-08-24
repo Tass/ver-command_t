@@ -22,7 +22,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 require File.expand_path('../spec_helper', File.dirname(__FILE__))
-require 'command-t/ext'
+require 'command_t/ext'
 
 describe CommandT::Match do
   def match_for path, pattern
