@@ -20,8 +20,8 @@ class VER::Executor::ExCommandT < VER::Executor::Entry
 
   def action(selected)
     if selected
-      throw :invalid if File.directory? path
-      VER.find_or_create_buffer(path)
+      throw :invalid if File.directory? selected
+      VER.find_or_create_buffer(selected)
     else
       tree.children.each do |child|
         path = Array(child).first # if more is added later
