@@ -5,7 +5,6 @@ class VER::Executor::ExCommandTYARD < VER::Executor::Entry
   end
   
   def setup
-    Registry.load!('.yardoc') # TODO use load_files
     @matcher = CommandT::Matcher.new(Registry, always_show_dot_files: true)
   end
 
@@ -37,5 +36,6 @@ class VER::Executor::ExCommandTYARD < VER::Executor::Entry
   end
   
   Registry = ::YARD::Registry
+  Registry.load!('.yardoc') # TODO use load_files
 
 end
